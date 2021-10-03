@@ -16,6 +16,12 @@ int main(int argc, const char * argv[]) {
     std::vector<double> x;
     std::vector<double> y;
     std::vector<double> weights;
+
+    for (int i = 0; i< argc ; i++)
+	 std::cout << "ARG " << argv[i] << std::endl;
+    
+    int degree = int(*argv[1]);
+    std::cout << "Polynomial degree " << degree << std::endl;
     
     for (int i = 0; i <= 5; ++i)
     {
@@ -30,8 +36,8 @@ int main(int argc, const char * argv[]) {
     y.push_back(-0.8);
     y.push_back(-0.1);
     
-    std::vector<double> coeff = polyfit_boost(x, y, 3);
-    std::vector<double> coeffWeighted = polyfit_boost(x, y, 3, weights);
+    std::vector<double> coeff = polyfit_boost(x, y, degree);
+    std::vector<double> coeffWeighted = polyfit_boost(x, y, degree, weights);
     
     std::cout << "Coefficients:\n";
     for (auto it = coeff.begin(); it != coeff.end(); ++it)
