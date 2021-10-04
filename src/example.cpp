@@ -7,8 +7,8 @@
 //
 
 #include <iostream>
-#include "PolyfitBoost.hpp"
-#include "PolyfitEigen.hpp"
+#include <polyfit_boost.h>
+#include <polyfit_eigen.h>
 
 int main(int argc, const char * argv[]) {
 
